@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  padding-top: 40px;
+}
+
+#login-screen {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  border: solid 4px;
+  border-color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .75s ease;
+}
+
+.login-btn:hover {
+  background-color: #448aff;
+  border-color: #448aff;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.label {
+  padding: 30px;
+}
+
+#messages {
+  /*background-color: blue;*/
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  font-size: 20px;
+}
+
+.input-container {
+  display:flex;
+}
+
+#input-msg {
+  border: solid 2px #999;
+  font-size: 26px;
+  padding: 0 15px;
+  flex-grow: 1;
+  height: 70px;
+}
+
+#header {
+  background-color: #448aff;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.right {
+  flex-flow: row-reverse;
+  text-align: right;
+}
+
+.left {
+  flex-flow: row;
+  text-align: left;
+}
+
+.msg-div {
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px 0;
+  font-size: 24px;
+  display: flex;
+}
+
+.name {
+  font-size: 15px;
+  color: #bcb7b7;
+}
+
+.msg {
+  word-wrap: break-word;
+}
+
+.profile-img {
+  height: 50px;
+  width: auto;
+  border-radius: 50px;
+}
+
+.date {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #bcb7b7;
+}
+
+.cool-scroll-bar-17::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.cool-scroll-bar-17::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.cool-scroll-bar-17::-webkit-scrollbar-thumb{
+	background-color: rgba(255, 178, 178, 0.72);
+  border-radius: 10px;
+}

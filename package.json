@@ -1,0 +1,16 @@
+{
+  "name": "firebase-chat",
+  "version": "1.0.0",
+  "description": "A fire base chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "reload -b"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "reload": "^1.1.0"
+  }
+}
