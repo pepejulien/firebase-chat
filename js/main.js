@@ -24,21 +24,16 @@ var login = () => {
 
     $("#login-screen").fadeOut(()=>{
       $("#chat-screen").html(
-       `<div id='#chat-screen-content'
-          style='width: 100vw;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;'>
-        <div class='header' id='header'></div>
-        <div id='messages' class='messages cool-scroll-bar-17'></div>
-        <div class='input-container'>
-          <input id='input-msg' type='text'/>
-          <div id='send-btn' class='send-btn' style='display: flex; justify-content: center; align-items: center; flex-grow: 1;'>
-            <i class='ion-ios-paperplane-outline'></i>
-          </div>
-        </div>
-      </div>`
+       `<div id='chat-screen-content' class='chat-screen-content'>
+         <div class='header' id='header'></div>
+         <div id='messages' class='messages cool-scroll-bar-17'></div>
+         <div class='input-container'>
+           <input id='input-msg' class='input-msg' type='text' />
+           <div id='send-btn' class='send-btn'>
+             <i class='ion-ios-paperplane-outline'></i>
+           </div>
+         </div>
+       </div>`
       ).fadeIn(()=>{
         showMessages(user);
         $('#header').html(`Hi ${user.displayName.split(' ')[0]}!`);
@@ -97,16 +92,21 @@ var showMessages = (user) => {
   });
 }
 
+
+
 var sendMessage = (name, date, email, img) => {
-  messages.push({
-    name: name,
-    message: $("#input-msg").val(),
-    date: date.toString(),
-    email: email,
-    img: img
-  });
-  $("#input-msg").val('');
+  if ($("#input-msg").val()) {
+    messages.push({
+      name: name,
+      message: $("#input-msg").val(),
+      date: date.toString(),
+      email: email,
+      img: img
+    });
+    $("#input-msg").val('');
+  }
 }
+
 
 var format = {
   date: (date) => {
